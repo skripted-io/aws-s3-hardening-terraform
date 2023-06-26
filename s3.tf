@@ -61,7 +61,7 @@ data "aws_iam_policy_document" "bucket_policy" {
       test     = "StringNotEquals"
       variable = "aws:sourceVpce"
       values = [
-        aws_vpc_endpoint.s3_vpce.id # only allow access when the workload account is using this VPC S3 Gateway endpoint
+        aws_vpc_endpoint.s3_vpce.id # only allow access when this VPC S3 Gateway endpoint is used
       ]
     }
   }
